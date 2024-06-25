@@ -92,3 +92,6 @@ class WebDriverHelper:
         self.switch_to_window(window_index=-1)
         # Open the URL in the new tab
         self.driver.get(url)
+
+    def execute_cript(self,script, token):
+        self.driver.execute_script(script, token)
