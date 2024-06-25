@@ -2,6 +2,7 @@ from concurrent.futures import ThreadPoolExecutor, as_completed
 import data.getData as getData
 
 
+
 def concurrent_e(tasks, max_workers, work):
     list_data_success = []
     list_data_false = []
