@@ -84,3 +84,11 @@ class WebDriverHelper:
             )
         except TimeoutException:
             print("Timed out waiting for page to load")
+    # 打开新的标签页并切换过去
+    def open_new_tab(self, url):
+        # Open a new tab using JavaScript
+        self.driver.execute_script("window.open('');")
+        # Switch to the new tab
+        self.switch_to_window(window_index=-1)
+        # Open the URL in the new tab
+        self.driver.get(url)
